@@ -18,7 +18,7 @@ export default function Login() {
         password,
       })
       .then((res) => {
-        navigate("/");
+        navigate("/home");
         console.log(res.data);
       })
       .catch((err) => {

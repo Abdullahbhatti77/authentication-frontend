@@ -19,7 +19,7 @@ export default function ResetPassword() {
         }
       )
       .then(() => {
-        navigate("/");
+        navigate("/home");
         alert("Password reset successfully");
       })
       .catch((err) => {
