@@ -10,11 +10,14 @@ export default function ForgotPassword() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://authentication-project-backend.vercel.app/auth/forgot-password", {
-        email,
-      })
+      .post(
+        "https://authentication-project-backend.vercel.app/auth/forgot-password",
+        {
+          email,
+        }
+      )
       .then(() => {
-        navigate("/login");
+        navigate("/");
         alert("Check your email for password reset link");
       })
       .catch((err) => {

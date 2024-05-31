@@ -11,11 +11,15 @@ export default function ResetPassword() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://authentication-project-backend.vercel.app/auth/reset-password/" + token, {
-        password,
-      })
+      .post(
+        "https://authentication-project-backend.vercel.app/auth/reset-password/" +
+          token,
+        {
+          password,
+        }
+      )
       .then(() => {
-        navigate("/login");
+        navigate("/");
         alert("Password reset successfully");
       })
       .catch((err) => {

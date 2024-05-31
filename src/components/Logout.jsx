@@ -9,7 +9,7 @@ export default function Logout() {
       .get("https://authentication-project-backend.vercel.app/auth/logout")
       .then((res) => {
         console.log(res.data);
-        navigate("/login");
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);

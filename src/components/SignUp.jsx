@@ -19,7 +19,7 @@ export default function SignUp() {
         password,
       })
       .then(() => {
-        navigate("/login");
+        navigate("/");
         alert("User registered successfully");
       })
       .catch((err) => {
@@ -64,7 +64,7 @@ export default function SignUp() {
           <button type="submit">Sign Up</button>
           <p className="mt-4 text-sm text-center text-gray-600">
             Have an account?{" "}
-            <Link to="/login" className="text-blue-500 hover:underline">
+            <Link to="/" className="text-blue-500 hover:underline">
               Login
             </Link>
           </p>
