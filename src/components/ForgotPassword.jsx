@@ -20,8 +20,12 @@ export default function ForgotPassword() {
         navigate("/");
         alert("Check your email for password reset link");
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        if (error.response && error.response.data) {
+          alert(error.response.data.message); // Display error message
+        } else {
+          alert("An error occurred. Please try again."); // Display generic error message
+        }
       });
   };
   return (

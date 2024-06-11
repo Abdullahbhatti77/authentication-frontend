@@ -22,8 +22,12 @@ export default function SignUp() {
         navigate("/");
         alert("User registered successfully");
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        if (error.response && error.response.data) {
+          alert(error.response.data.message); // Display error message
+        } else {
+          alert("An error occurred. Please try again."); // Display generic error message
+        }
       });
   };
 

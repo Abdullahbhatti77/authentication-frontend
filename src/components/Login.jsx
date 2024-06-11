@@ -19,10 +19,14 @@ export default function Login() {
       })
       .then((res) => {
         navigate("/home");
-        console.log(res.data);
+        alert(res.data.message);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        if (error.response && error.response.data) {
+          alert(error.response.data.message); // Display error message
+        } else {
+          alert("An error occurred. Please try again."); // Display generic error message
+        }
       });
   };
   return (
